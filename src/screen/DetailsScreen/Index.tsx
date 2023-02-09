@@ -1,11 +1,11 @@
 import { View, Text } from 'react-native'
 import React, { FC } from 'react'
+import DetailsView from './DetailsView'
+
 
 const DetailsScreen: FC = () => {
   return (
-    <View>
-      <Text>DetailsScreen</Text>
-    </View>
+    <DetailsView />
   )
 }
 
