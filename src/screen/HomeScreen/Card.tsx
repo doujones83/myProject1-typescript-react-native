@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { View, Text, Image, TouchableOpacity } from 'react-native'
 import { Project1 } from '../../interfaces'
-import { styles } from './styles'
+import styles  from './styles'
 
 interface Props {
     data: Project1

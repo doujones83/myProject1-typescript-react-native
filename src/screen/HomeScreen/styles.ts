@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
     height: 50,
     alignItems: 'center',
     justifyContent: 'center',
+    marginVertical: 20,
   },
   filterText: {
     fontSize: 20,
@@ -100,4 +101,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { styles };
+export default styles;

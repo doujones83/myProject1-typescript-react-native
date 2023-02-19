@@ -1,12 +1,16 @@
-import React from 'react'
-import { View } from 'react-native/types'
-import { MainStack } from './src/navigation'
+import React, { useEffect } from 'react';
+import { MainStack, AuthStack } from './src/navigation';
+import { useSelector } from 'react-redux';
+import { RootState } from './src/redux/store';
 
 const App = () => {
-  return (
-        <MainStack />
-  )
-}
+  const isLogged = useSelector<RootState>(state => state.auth.isLogged);
 
-export default App
+  useEffect(() => {
 
+  }, [isLogged]);
+
+  return isLogged ? <MainStack /> : <AuthStack />;
+};
+
+export default App;

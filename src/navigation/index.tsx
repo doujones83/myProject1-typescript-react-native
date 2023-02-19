@@ -6,6 +6,7 @@ import DetailsScreen from '../screen/DetailsScreen/Index';
 import { Project1 } from '../interfaces';
 
 export type StackParamsList = {
+  Login: undefined
   Home: undefined
   Details: {project1: Project1}
 }
@@ -17,10 +18,22 @@ function MainStack(){
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerBackTitleVisible: false}}>
         <Stack.Screen name="Home" component={ HomeScreen } options={{ title: 'MyProject1'}} />
-        <Stack.Screen name="Details" component={ DetailsScreen } options={{ title: 'MyProject1 Details'}}/>
+        <Stack.Screen name="Details" component={ DetailsScreen } options={{ title: 'MyProject1 Details'}}/>  
       </Stack.Navigator>
     </NavigationContainer>
   )
 }
+function AuthStack() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false}}>
+        <Stack.Screen
+          name="Login"
+          component={LoginScreen}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
 
-export { MainStack };
+export { MainStack, AuthStack };
