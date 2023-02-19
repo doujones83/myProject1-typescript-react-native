@@ -13,5 +13,5 @@ export interface Project1 {
 export interface Project1State {
     isLoading: boolean
     data: Project1[],
-    favoriteProject1: undefined
+    favoriteProject1: Project1 | undefined
   }
