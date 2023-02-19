@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { MainStack, AuthStack } from './src/navigation';
+import { MainStack, AuthStack } from './src/navigation/index';
 import { useSelector } from 'react-redux';
 import { RootState } from './src/redux/store';
 
@@ -10,7 +10,7 @@ const App = () => {
 
   }, [isLogged]);
 
-  return isLogged ? <MainStack /> : <AuthStack />;
+  return( isLogged ? <MainStack /> : <AuthStack />)
 };
 
 export default App;

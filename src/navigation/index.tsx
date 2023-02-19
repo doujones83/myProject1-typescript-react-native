@@ -4,6 +4,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from '../screen/HomeScreen/Index';
 import DetailsScreen from '../screen/DetailsScreen/Index';
 import { Project1 } from '../interfaces';
+import LoginScreen from '../screen/loginScreen';
+
 
 export type StackParamsList = {
   Login: undefined
